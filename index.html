@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#1a6577">
+  <title>SPL EIU Companion</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231a6577'/%3E%3Cpath d='M13 4L6 13h5l-1 7 7-9h-5z' fill='white'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="splash" id="splash" role="presentation">
+    <div class="splash-in">
+      <span class="splash-ring"></span>
+      <div class="splash-logo">
+        <img class="on-light" src="assets/pacetronix-logo.png" alt="Pacetronix">
+        <img class="on-dark" src="assets/pacetronix-logo-light.png" alt="" aria-hidden="true">
+        <span class="shine" aria-hidden="true"></span>
+      </div>
+      <svg class="splash-ecg" viewBox="0 0 260 36" aria-hidden="true">
+        <path d="M0 18h52q4 0 6-4t6 4h18l5 5 5-16 6 26 5-17 5 2h14q4 0 7-7t7 7h108"/>
+      </svg>
+      <div class="splash-line">Shree Pacetronix Ltd. &middot; implantable cardiac devices since 1988</div>
+      <div class="splash-app"><span class="rule"></span>SPL EIU Companion</div>
+    </div>
+    <div class="splash-demo">Demo build &middot; simulated data</div>
+  </div>
+
+  <div class="device" id="device">
+    <div class="demo-banner">DEMO &middot; Simulated data &middot; Not for clinical use</div>
+
+    <header class="topbar">
+      <div class="brand-mark" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 3L5 13h6l-1 8 8-10h-6z"/></svg>
+      </div>
+      <div class="titles">
+        <h1>SPL EIU Companion</h1>
+        <div class="sub" data-bind="roleLabel">Patient mode</div>
+      </div>
+      <span class="pill" data-chip="conn" data-bind="connPill">Offline</span>
+      <button class="iconbtn" data-action="settings" aria-label="Settings">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 00.3 1.8l.1.1a2 2 0 11-2.8 2.8l-.1-.1a1.7 1.7 0 00-1.8-.3 1.7 1.7 0 00-1 1.5V21a2 2 0 11-4 0v-.1a1.7 1.7 0 00-1.1-1.5 1.7 1.7 0 00-1.8.3l-.1.1a2 2 0 11-2.8-2.8l.1-.1a1.7 1.7 0 00.3-1.8 1.7 1.7 0 00-1.5-1H3a2 2 0 110-4h.1a1.7 1.7 0 001.5-1.1 1.7 1.7 0 00-.3-1.8l-.1-.1a2 2 0 112.8-2.8l.1.1a1.7 1.7 0 001.8.3H9a1.7 1.7 0 001-1.5V3a2 2 0 114 0v.1a1.7 1.7 0 001 1.5 1.7 1.7 0 001.8-.3l.1-.1a2 2 0 112.8 2.8l-.1.1a1.7 1.7 0 00-.3 1.8V9a1.7 1.7 0 001.5 1H21a2 2 0 110 4h-.1a1.7 1.7 0 00-1.5 1z"/></svg>
+      </button>
+    </header>
+
+    <main id="view"></main>
+    <nav class="tabbar" id="tabbar"></nav>
+
+    <div id="modal-root"></div>
+    <div id="toast"></div>
+  </div>
+  <script src="app.js"></script>
+  <script>setTimeout(function () { var s = document.getElementById("splash"); if (s) s.remove(); }, 2700);</script>
+</body>
+</html>
